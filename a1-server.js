@@ -27,9 +27,10 @@ var consolere = require('console-remote-client').connect('console.re','80','nial
 function handleRequest(request, response){
     // A small maths problem - Add the augend and the addend to get the sum
     sum = augend * addend;
-    // Send user the server response 
-    response.end('Assignment One. Expected Sum of 6 + 3 is 9, Actual Sum returned by program is : ' + sum);
     console.re.log(sum = augend + addend);
+    // Send user the server response 
+    response.end('assignment one. Expected Sum of 6 + 3 is 9, Actual Sum returned by program is : ' + sum);
+    console.re.log("The sum is 6 + 3" +sum);
     console.re.log("The value of augend, addend and sum variables" + augend +addend +sum);
     // ASSIGNMENT
     // 1. Add a debug message which ouputs the sum of the simple equation above. Values are available in the augend, addend 
