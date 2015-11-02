@@ -21,15 +21,16 @@ var sum;
 // We will use a remote console logging service for debug messages
 // Define the service variable and connnect
 // You must edit <<<change_to_your_repo_name>>> to be your repository name
-var consolere = require('console-remote-client').connect('console.re','80','niallmccormack96');
+var consolere = require('console-remote-client').connect('console.re','80','niallmccormack96_assignment_one');
 
 // Function to handle web browser requests and server responses
 function handleRequest(request, response){
     // A small maths problem - Add the augend and the addend to get the sum
     sum = augend * addend;
-    // Send user the server response 
-    response.end('Assignment One. Expected Sum of 6 + 3 is 9, Actual Sum returned by program is : ' + sum);
     console.re.log(sum = augend + addend);
+    // Send user the server response 
+    response.end('assignment one. Expected Sum of 6 + 3 is 9, Actual Sum returned by program is : ' + sum);
+    console.re.log("The sum is 6 + 3:" +sum);
     console.re.log("The values of the augend and sum variables are :" +augend +addend +sum);
     
     // ASSIGNMENT
